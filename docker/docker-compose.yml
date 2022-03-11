@@ -3,10 +3,11 @@ version: '3.5'
 services:
   ### Jesse's Workspace ################################################
   jesse:
-    image: salehmir/jesse:latest
+    image: .
     depends_on:
       - postgres
       - redis
+    stdin_open: true
     tty: true
     env_file:
       - ../.env
